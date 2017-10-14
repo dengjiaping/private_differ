@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+<!--    <external-path
+        name="external_files"
+        path=""/>-->
+    <external-path
+        name="external_files"
+        path="."/>
+
+    <external-path name="beta_external_path" path="Download/"/>
+    <external-path name="beta_external_files_path" path="Android/data/"/>
+
+</paths>
+
+    <!--    path=""，是有特殊意义的，它代码根目录，也就是说你可以向其它的应用共享根目录及其子目录下任何一个文件了，
+        如果你将 path 设为 path=”pictures”， 那么它代表着根目录下的 pictures目录(eg:/storage/emulated/0/pictures)，
+        如果你向其它应用分享 pictures目录 范围之外的文件是不行的。-->

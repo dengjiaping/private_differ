@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="6dp"
+        android:text=" _(:3 」∠)_ \n游戏大神，身经百战，阅游无数\n当前探索条件，未探出新的游戏"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/btn_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:text="去我的游戏看看 >"
+        android:textColor="@color/btn_normal"
+        android:textSize="16sp"/>
+</LinearLayout>

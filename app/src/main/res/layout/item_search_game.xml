@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+    <com.appgame.differ.widget.ShapeImageView
+        android:id="@+id/game_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:src="@color/default_image_color"
+        app:round_radius="5dp"
+        app:shape_mode="round_rect"/>
+
+    <TextView
+        android:id="@+id/game_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/game_icon"
+        android:layout_toLeftOf="@+id/pro_bar"
+        android:layout_toRightOf="@+id/game_icon"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="14sp"
+        tool:text="天命传说之这都是命"/>
+
+    <com.appgame.differ.widget.star.StarView
+        android:id="@+id/start_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_name"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/game_icon"
+        app:starCount="5"
+        app:starDistance="2dp"
+        app:starEmpty="@drawable/icon_star_grey"
+        app:starFill="@drawable/icon_star_green"
+        app:starSize="10dp"/>
+
+    <TextView
+        android:id="@+id/star_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_name"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/start_bar"
+        android:textColor="@color/black_alpha_60"
+        android:textSize="9sp"
+        tool:ignore="SmallSp"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_mark"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@+id/pro_bar"
+        android:layout_toRightOf="@+id/game_icon"/>
+
+    <com.appgame.differ.widget.download.DownloadProgressButton
+        android:id="@+id/pro_bar"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="下载"
+        app:progress_btn_background_color="@color/btn_normal"
+        app:progress_btn_background_second_color="@color/white"
+        app:progress_btn_radius="2dp"
+        app:progress_btn_text_color="@color/btn_normal"
+        app:progress_btn_text_cover_color="@color/white"
+        app:progress_btn_text_size="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/line_color"/>
+</RelativeLayout>

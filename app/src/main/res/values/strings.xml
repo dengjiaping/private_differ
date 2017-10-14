@@ -1,0 +1,223 @@
+<resources>
+    <string name="app_name">differ</string>
+    <!--    <string name="channel">zixun</string>-->
+    <string name="dsv_ex_msg_dont_set_lm">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
+
+    <string name="login_tip">请选择登录方式</string>
+    <string name="login_error">登录失败</string>
+    <string name="login_phone_error">请输入正确的手机号码</string>
+    <string name="login_pwd_error">请输入6-12位密码</string>
+    <string name="login_title">登录</string>
+    <string name="login_phone_reg">手机注册</string>
+    <string name="login_forgot_pwd">忘记密码</string>
+    <string name="login_pwd_tip">6到12位的密码</string>
+    <string name="login_account_tip">请输入手机号码</string>
+    <string name="login_ver_code_tip">请输入验证码</string>
+    <string name="login_get_ver_code">获取验证码</string>
+    <string name="login_reg_title">注册</string>
+    <string name="login_xy_tip">点击注册按钮代表接受用户协议</string>
+    <string name="login_send_ver_error">短信无法发送到指定的手机号码.</string>
+    <string name="login_vercode_error">请输入正确的验证码</string>
+    <string name="login_reg_success">注册成功</string>
+    <string name="forgot_phone">手机号：</string>
+    <string name="forgot_phone_tip">请输入正确的手机号</string>
+    <string name="forgot_ver_code">验证码：</string>
+    <string name="forgot_ver_code_tip">请输入6位验证码</string>
+    <string name="forgot_get_ver_code">获取验证码</string>
+    <string name="forgot_new_pwd">新密码：</string>
+    <string name="forgot_new_pwd_tip">请输入6到12位的新密码</string>
+    <string name="forgot_enter">确认</string>
+    <string name="forgot_title">忘记密码</string>
+    <string name="login_error_tip">用户名或者密码错误</string>
+    <string name="forgot_ver_code_error">验证码不能为空</string>
+    <string name="forgot_success">修改密码成功</string>
+    <string name="forgot_error">修改密码失败</string>
+    <string name="edit_title">修改信息</string>
+    <string name="edit_user_header">头像</string>
+    <string name="edit_username">昵称</string>
+    <string name="edit_save">保存</string>
+    <string name="edit_sex">性别</string>
+    <string name="edit_birthday">生日</string>
+    <string name="edit_signature">签名</string>
+    <string name="edit_privacy">隐私设置</string>
+    <string name="coll_evaluate">评价</string>
+    <string name="coll_download">开放下载</string>
+    <string name="coll_review">审核中</string>
+
+    <string-array name="mine_tab">
+        <item>游戏</item>
+        <item>动态</item>
+        <item>关于TA</item>
+    </string-array>
+
+    <string-array name="search_type">
+        <item>游戏</item>
+        <item>文章</item>
+        <item>玩家</item>
+    </string-array>
+
+    <string-array name="games_detail_tab_3">
+        <item>详情</item>
+        <item>攻略</item>
+        <item>评价</item>
+    </string-array>
+
+    <string-array name="games_detail_tab_2">
+        <item>详情</item>
+        <item>评价</item>
+    </string-array>
+
+
+    <string-array name="dynamic_report_list">
+        <item>恶意攻击谩骂</item>
+        <item>营销广告</item>
+        <item>淫秽色情</item>
+        <item>政治反动</item>
+        <item>不可描述</item>
+    </string-array>
+
+    <string name="setting_title">设置</string>
+    <string name="setting_delete_pkg">安装后自动删除安装包</string>
+    <string name="setting_pull">推送通知回复/贴标签</string>
+    <string name="setting_friend">邀请朋友一起来</string>
+    <string name="setting_about">关于我们</string>
+    <string name="setting_agreement">用户协议</string>
+    <string name="setting_outlogin">退出当前登录账号</string>
+    <string name="setting_dialog_title">确定退出当前登录账号</string>
+    <string name="setting_dialog_no">取消</string>
+    <string name="setting_dialog_yes">确定</string>
+
+    <string name="download_title">下载列表</string>
+
+    <string name="about_us">关于我们</string>
+    <string name="dynamic_hint_1">好玩的游戏和有趣的图文，都来自朋友的分享</string>
+    <string name="dynamic_hint_2">加入我们，一起快乐分享</string>
+    <string name="privacy_setting">隐私设置</string>
+    <string name="feedback_title">反馈</string>
+    <string name="feedback_mine">我反馈的建议或问题</string>
+    <string name="feedback_btn">反馈建议或问题</string>
+    <string name="feedback_new_hint">请输入您遇到的问题或建议</string>
+    <string name="feedback_sumb">提交反馈</string>
+    <string name="game_pingjia">游戏评价</string>
+    <string name="pl_list_hint">我要评论</string>
+    <string name="article_title">文章正文</string>
+    <string name="wanna_comment">评价这个游戏</string>
+    <string name="already_comment">已评价该游戏</string>
+    <string name="discuss_hint">说点什么吧</string>
+    <string name="wanna_play">去玩</string>
+    <string name="like">喜欢</string>
+    <string name="game_detail_introduction">游戏介绍</string>
+    <string name="game_evaluation">用户评价</string>
+    <string name="relative_game">相关游戏</string>
+    <string name="tag">＋贴标签</string>
+    <string name="evaluation_hint">安装游戏后可以评价</string>
+    <string name="add_tag">添加标签可以增加趣味性哦</string>
+    <string name="star1_hint">比较失望</string>
+    <string name="star2_hint">一般而已</string>
+    <string name="star3_hint">值得一玩</string>
+    <string name="star4_hint">绝非凡品</string>
+    <string name="star5_hint">强烈推荐</string>
+    <string name="empty_installed">(＞﹏＜)\r\n阿哦，您还没有下载过游戏</string>
+    <string name="empty_played">(＞﹏＜)\r\n阿哦，您还没有已玩的过游戏</string>
+    <string name="empty_liked">(＞﹏＜)\r\n阿哦，您还没有未玩过的游戏</string>
+    <string name="empty_other">(＞﹏＜)\r\nTA还没有玩过的游戏</string>
+
+    <string name="tab_title_discover">发现</string>
+    <string name="tab_title_recommend">推荐</string>
+    <string name="tab_title_personal">我的</string>
+    <string name="item_recommend">来自编辑推荐</string>
+    <string name="item_topic">专题</string>
+    <string name="item_browse_more">查看更多</string>
+    <string name="game_type_discover">游戏类型</string>
+    <string name="game_detail">游戏详情</string>
+    <string name="game_download">安装</string>
+    <string name="game_introduction">简介</string>
+    <string name="game_update_content">更新内容</string>
+    <string name="game_detail_content">详细内容</string>
+    <string name="game_type_evaluate">评价</string>
+    <string name="game_detail_want_evaluate">您还没有评价这个游戏</string>
+    <string name="game_detail_go_evaluate">马上评价</string>
+    <string name="game_detail_edit_evaluate_big">您认为这个游戏值多少星</string>
+    <string name="game_detail_edit_evaluate_small">（最差一星，最好5星）</string>
+    <string name="game_detail_edit_evaluate_idea">用文字描述一下您这个游戏的感想</string>
+    <string name="game_detail_edit_evaluate_hint">请留下您的评语，认真评价会使您得到其他玩家的认可</string>
+    <string name="game_detail_edit_save_evaluation">保存评价</string>
+    <string name="game_detail_edit_title">我的评价</string>
+    <string name="collect_success">已喜欢</string>
+    <string name="expand">展开全文</string>
+    <string name="collapse">收起全文</string>
+
+    <string name="game_detail_apk_size">－ 文件大小：</string>
+    <string name="game_detail_update_time">－ 更新时间：</string>
+    <string name="game_detail_version">－ 当前版本：</string>
+    <string name="game_detail_publisher">－ 厂商：</string>
+
+
+    <string name="download_tip1">现在没有游戏下载哦</string>
+    <string name="download_tip2">赶紧去找游戏噢</string>
+    <string name="download_tip3">去找游戏</string>
+
+    <string name="wechat_client_inavailable">目前您的微信版本过低或未安装微信，需要安装微信才能使用</string>
+
+
+    <string name="search_cancel">取消</string>
+    <string name="search_hint">输入内容</string>
+    <string name="search_result">搜索结果</string>
+    <string name="search_everybody">大家都在搜</string>
+    <string name="search_key">请输入搜索关键字</string>
+
+    <string name="game_evaluation_empty">游戏评价不能为空</string>
+    <string name="game_evaluation_little">请输入3个字以上的评价</string>
+    <string name="game_evaluation_large">评价过长</string>
+    <string name="evaluation_incorrect">请输入1～150字的评价</string>
+
+    <string name="dialog_newwork_title">当前处于移动网络</string>
+    <string name="dialog_newwork_desc">您正处于移动网络环境下，下载会消耗您的流量，是否继续?</string>
+    <string name="dialog_newwork_center">暂不</string>
+    <string name="dialog_newwork_enter">继续</string>
+    <string name="dialog_quit_title">有游戏正在下载</string>
+    <string name="dialog_quit_desc">还有游戏正在下载中，是否退出?</string>
+    <string name="dialog_quit_center">否</string>
+    <string name="dialog_quit_enter">是</string>
+    <string name="dialog_update_title">发现新版本</string>
+    <string name="dialog_update_desc">* 您需要更新才能继续使用 *</string>
+    <string name="dialog_update_center">暂不更新</string>
+    <string name="dialog_update_enter">立即更新</string>
+    <string name="dialog_update_ing">版本更新中</string>
+    <string name="dialog_update_finish">下载完成，正在启动安装</string>
+    <string name="dialog_update_ed">. 安装包已下载 .</string>
+
+    <string name="tip_network_error">网络不给力，请检查网络设置</string>
+
+    <string name="explore_one">探索玩家推荐(默认)</string>
+    <string name="explore_two">探索好评的</string>
+    <string name="explore_three">探索其他玩家都在玩</string>
+    <string name="explore_four">探索可能喜欢的</string>
+    <string name="explore_fire">探索可能没玩过</string>
+    <string name="already_installed">已安装</string>
+    <string name="already_play">已玩过</string>
+    <string name="un_play">未玩过</string>
+
+    <string name="feedback_download_game_success">下载成功</string>
+    <string name="feedback_download_game_failed">下载失败</string>
+
+    <string name="share_title">下载differ，和我一起畅玩精品游戏</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error">哎呀，服务器开小差了!!</string>
+    <string name="network_not_connected">当前移动网络连接不可用，请确保你已经打开网络</string>
+    <string name="network_time_out">网络不给力，请检测网络设置</string>
+
+    <!--共享元素-->
+    <string name="transition_game_detail_background">game_detail_background</string>
+    <string name="transition_game_detail_cover">game_detail_cover</string>
+    <string name="transition_game_detail_title">game_detail_title</string>
+    <string name="transition_user_avatar">user_avatar</string>
+    <string name="transition_recommend_item">transition_recommend_item</string>
+    <string name="transition_image_page">transition_image_page</string>
+
+    <string name="umeng_socialize_female">女</string>
+    <string name="umeng_socialize_male">男</string>
+
+</resources>

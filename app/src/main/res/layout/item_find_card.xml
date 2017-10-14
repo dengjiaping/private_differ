@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/game_cover"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:adjustViewBounds="true"
+            android:background="@color/default_image_color"
+            android:scaleType="fitXY"/>
+
+        <com.appgame.differ.widget.ShapeImageView
+            android:id="@+id/game_icon"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_below="@+id/game_cover"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="4.5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@color/default_image_color"
+            app:round_radius="5dp"
+            app:shape_mode="round_rect"/>
+
+        <TextView
+            android:id="@+id/game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/game_icon"
+            android:layout_toRightOf="@+id/game_icon"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="14sp"
+            tool:text="天命传说"/>
+
+        <TextView
+            android:id="@+id/game_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_name"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/game_icon"
+            android:textColor="#FF9B9B9B"
+            android:textSize="10sp"
+            tool:text="动作格斗、漫画改编"/>
+
+        <TextView
+            android:id="@+id/btn_reserve"
+            android:layout_width="47.5dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/game_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_frame_green_corner_3"
+            android:gravity="center"
+            android:text="预约"
+            android:textColor="@color/btn_normal"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

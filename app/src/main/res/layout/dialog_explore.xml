@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_white_corner"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="29dp"
+        android:text="_(:3 」∠)_"
+        android:textColor="#a3000000"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="5dp"
+        android:text="游戏大神，身经百战，阅游无数当前探索条件，未探测出新的游戏"
+        android:textColor="#cc000000"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/btn_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="17dp"
+        android:text="去我的游戏看看"
+        android:textColor="#FF21B8B8"
+        android:textSize="16sp"/>
+</LinearLayout>

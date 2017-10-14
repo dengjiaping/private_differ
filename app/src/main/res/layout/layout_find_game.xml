@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/game_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/desc_layout"
+    android:layout_marginTop="9dp"
+    android:gravity="center_vertical">
+
+    <com.appgame.differ.widget.ShapeImageView
+        android:id="@+id/game_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+        android:src="@color/default_image_color"
+        app:round_radius="5dp"
+        app:shape_mode="round_rect" />
+
+    <TextView
+        android:id="@+id/game_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/game_icon"
+        android:layout_toLeftOf="@+id/pro_bar"
+        android:layout_toRightOf="@+id/game_icon"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="12sp"
+        tool:text="天命传说之这都是命" />
+
+    <TextView
+        android:id="@+id/game_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_name"
+        android:layout_toLeftOf="@+id/pro_bar"
+        android:layout_toRightOf="@+id/game_icon"
+        android:textColor="#FF9B9B9B"
+        android:textSize="10sp"
+        tool:text="ARPG   123.3M" />
+
+
+    <com.appgame.differ.widget.download.DownloadProgressButton
+        android:id="@+id/pro_bar"
+        android:layout_width="48dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="下载"
+        app:progress_btn_background_color="@color/btn_normal"
+        app:progress_btn_background_second_color="@color/white"
+        app:progress_btn_radius="2dp"
+        app:progress_btn_text_color="@color/btn_normal"
+        app:progress_btn_text_cover_color="@color/white"
+        app:progress_btn_text_size="12sp" />
+</RelativeLayout>

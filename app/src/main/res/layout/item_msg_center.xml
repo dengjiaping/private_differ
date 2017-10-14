@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="vertical">
+
+    <View
+        android:id="@+id/msg_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_red_round"
+        android:visibility="invisible"/>
+
+    <com.appgame.differ.widget.CircleImageView
+        android:id="@+id/user_header"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/msg_dot"
+        android:src="@color/default_image_color"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.5dp"
+        android:layout_toLeftOf="@+id/msg_time"
+        android:layout_toRightOf="@+id/user_header"
+        android:text="白小喵的喵"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/msg_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/msg_time"
+        android:layout_toRightOf="@+id/user_header"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="用户狸猫太子回复了你：快来搞事啊！"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="11sp"/>
+
+
+    <TextView
+        android:id="@+id/msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="20dp"
+        android:text="5分钟前"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="11sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="63dp"
+        android:background="#4c979797"/>
+</RelativeLayout>

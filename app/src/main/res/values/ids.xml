@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="swipe_refresh_layout" type="id"/>
+    <item name="statusbar_view" type="id"/>
+    <item name="translucent_view" type="id"/>
+    <item name="id_stickynavlayout_topview" type="id"/>
+    <item name="id_stickynavlayout_indicator" type="id"/>
+    <item name="id_stickynavlayout_viewpager" type="id"/>
+    <item name="imageloader_uri" type="id"/>
+    <item name="swipe_content" type="id"/>
+    <item name="swipe_right" type="id"/>
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+
+    <item type="id" name="ptr_classic_frame_layout"/>
+
+
+    <item name="aspect_fit_parent" type="id">false</item>
+</resources>

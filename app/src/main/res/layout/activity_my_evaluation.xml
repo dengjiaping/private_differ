@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".module.game.PostEvaluationActivity">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/bar_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.appgame.differ.widget.star.StarView
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                ratingbar:starCount="5"
+                ratingbar:starDistance="8dp"
+                ratingbar:starEmpty="@drawable/icon_star_grey"
+                ratingbar:starFill="@drawable/icon_star_green"
+                ratingbar:starSize="28dp"/>
+
+            <TextView
+                android:id="@+id/describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="26dp"
+                android:layout_toRightOf="@+id/ratingBar"
+                android:text="@string/star1_hint"/>
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/ratingBar"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_evaluation_edit"
+                android:gravity="start"
+                android:hint="@string/game_detail_edit_evaluate_hint"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tag_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="添加标签可以增加趣味性哦"
+                android:visibility="gone"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tag_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tag_title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/post_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/tag_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_frame_gray_corner"
+            android:hint="添加新标签"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_green_corner_click"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+</RelativeLayout>

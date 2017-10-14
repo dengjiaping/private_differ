@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.appgame.differ.widget.CircleImageView
+        android:id="@+id/user_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="15dp"
+        android:src="@color/default_image_color"/>
+
+    <com.appgame.differ.widget.UserNameView
+        android:id="@+id/user_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_header"
+        android:layout_toRightOf="@+id/user_header"/>
+
+    <TextView
+        android:id="@+id/user_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_name_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/user_name_layout"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="@dimen/textSize_12"
+        tool:text="分享游戏"/>
+
+    <TextView
+        android:id="@+id/dy_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name_layout"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="@dimen/textSize_12"
+        tool:text="59秒前"/>
+
+    <com.appgame.differ.widget.ExpandableTextView
+        android:id="@+id/expandable_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dy_time"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        app:showAllText="查看全文"
+        android:layout_toRightOf="@+id/user_header"
+        app:expandType="card"
+        app:maxCollapsedLines="6">
+
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/black_alpha_80"
+            tool:text="游戏内容我给满分，就是卡牌释放延迟好蛋疼，回个血没放出来就die了。果然我还是太菜了(　ﾟ皿ﾟ)，初音联动了！！"/>
+
+        <TextView
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:textColor="#FF15B1B8"
+            android:textSize="12sp"/>
+    </com.appgame.differ.widget.ExpandableTextView>
+
+    <RelativeLayout
+        android:id="@+id/appraise_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expandable_view"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:background="@color/default_image_color"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/forward_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/btn_normal"
+            android:textSize="13sp"/>
+
+        <com.appgame.differ.widget.star.StarView
+            android:id="@+id/forward_start_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/forward_user_name"
+            app:starCount="5"
+            app:starDistance="2dp"
+            app:starEmpty="@drawable/icon_star_grey"
+            app:starFill="@drawable/icon_star_green"
+            app:starSize="10dp"/>
+
+        <TextView
+            android:id="@+id/forward_star_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/forward_start_bar"
+            android:layout_marginLeft="3.5dp"
+            android:layout_toRightOf="@+id/forward_start_bar"
+            android:text="9.5"
+            android:textSize="9sp"/>
+
+        <com.appgame.differ.widget.ExpandableTextView
+            android:id="@+id/forward_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forward_start_bar"
+            android:layout_marginTop="3dp"
+            android:lineSpacingExtra="3dp"
+            app:showAllText="查看全文"
+            app:expandType="card"
+            app:maxCollapsedLines="6">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/black_alpha_80"
+                tool:text="游戏内容我给满分，就是卡牌释放延迟好蛋疼，回个血没放出来就die了。果然我还是太菜了(　ﾟ皿ﾟ)，初音联动了！！"/>
+
+            <TextView
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:textColor="#FF15B1B8"
+                android:textSize="12sp"/>
+        </com.appgame.differ.widget.ExpandableTextView>
+
+        <ImageView
+            android:id="@+id/appraise_cover"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@color/default_image_color"
+            android:layout_below="@+id/forward_user_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/icon_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/jc_play_normal"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/game_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/appraise_cover"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <com.appgame.differ.widget.ShapeImageView
+                android:id="@+id/game_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:src="@color/default_image_color"
+                app:round_radius="8dp"
+                app:shape_mode="round_rect"/>
+
+            <TextView
+                android:id="@+id/game_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/game_icon"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/game_icon"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_12"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tag_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/game_title"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/game_icon"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/user_layout"
+        layout="@layout/layout_dynamic_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appraise_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@+id/user_header"/>
+
+    <include
+        android:id="@+id/dynamic_detail_bottom"
+        layout="@layout/layout_dynamic_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_layout"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/dynamic_detail_bottom"
+        android:background="@color/default_image_color"/>
+
+</RelativeLayout>

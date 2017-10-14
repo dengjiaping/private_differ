@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F4F4"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/bottomRadioGroup"
+        android:background="@color/black_alpha_30"/>
+
+    <RadioGroup
+        android:id="@+id/bottomRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_find"
+            style="@style/tabStyle"
+            android:drawableTop="@drawable/tab_find"
+            android:text="推荐"/>
+
+        <RadioButton
+            android:id="@+id/tab_daily"
+            style="@style/tabStyle"
+            android:drawableTop="@drawable/tab_daily"
+            android:text="日报"/>
+
+        <RadioButton
+            android:id="@+id/tab_wiki"
+            style="@style/tabStyle"
+            android:drawableTop="@drawable/tab_wiki"
+            android:text="wiki"/>
+
+        <RadioButton
+            android:id="@+id/tab_dynamic"
+            style="@style/tabStyle"
+            android:drawableTop="@drawable/tab_dynamic"
+            android:text="动态"/>
+
+        <RadioButton
+            android:id="@+id/tab_mine"
+            style="@style/tabStyle"
+            android:drawableTop="@drawable/tab_mine"
+            android:text="我的"/>
+
+    </RadioGroup>
+
+    <!--    <ImageView
+            android:id="@+id/tab_differ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/tab_differ"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/user_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/btn_like"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/btn_like"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_like_big_def"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="22"/>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/btn_like"
+        android:layout_marginTop="14dp"
+        android:background="@color/default_image_color"/>
+
+    <TextView
+        android:id="@+id/comment_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="16sp"
+        tool:text="玩家讨论（56）"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/comment_num"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:background="#FF15B1B8"/>
+
+    <com.appgame.differ.widget.CustomEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>

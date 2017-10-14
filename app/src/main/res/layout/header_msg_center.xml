@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_system_msg"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/msg_system_dot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_red_round"/>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@drawable/icon_system_message"/>
+
+        <TextView
+            android:id="@+id/system_msg_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="系统通知（20）"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/item_system_msg"
+        android:layout_marginLeft="63dp"
+        android:background="#4c979797"/>
+
+    <LinearLayout
+        android:id="@+id/item_official_msg"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_below="@+id/line"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/msg_official_dot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_red_round"/>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@drawable/icon_official_news"/>
+
+        <TextView
+            android:id="@+id/official_msg_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="differ官方（5）"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/item_official_msg"
+        android:layout_marginLeft="63dp"
+        android:background="#4c979797"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#4cd8d8d8"/>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="游戏介绍"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <View
+        android:layout_width="72dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"/>
+
+    <com.appgame.differ.widget.ExpandTextView
+        android:id="@+id/expandable_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:animDuration="200"
+        app:collapseExpandTextColor="@color/font_select_color"
+        app:contentTextColor="@color/black_alpha_80"
+        app:contentTextSize="@dimen/textSize_14"
+        app:maxCollapsedLines="4"
+        app:textCollapse="@string/collapse"
+        app:textExpand="@string/expand"/>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".module.gamesdetail.TipsFragment">
+
+    <!--<EditText-->
+        <!--android:id="@+id/edit_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginRight="12dp"-->
+        <!--android:layout_marginTop="14dp"-->
+        <!--android:background="@drawable/shape_edit_bg"-->
+        <!--android:drawableLeft="@drawable/search_icon_grey_dis"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:hint="@string/search_key"-->
+        <!--android:imeOptions="actionSearch"-->
+        <!--android:textSize="13sp" />-->
+
+    <!--<com.zhy.view.flowlayout.TagFlowLayout-->
+        <!--android:id="@+id/tab_flow_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="7dp"-->
+        <!--android:layout_marginRight="7dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--app:max_select="1" />-->
+
+    <!--<View-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#e1e1e1" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:paddingBottom="75dp" />
+
+</LinearLayout>

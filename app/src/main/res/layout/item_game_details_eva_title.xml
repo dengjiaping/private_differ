@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="#4cd8d8d8">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:background="#FF15B1B8"/>
+
+        <TextView
+            android:id="@+id/com_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.5dp"
+            android:layout_toRightOf="@+id/line"
+            android:text="热门评价"
+            android:textColor="#FF9B9B9B"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <com.appgame.differ.widget.CustomEmptyView
+        android:id="@+id/comment_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"/>
+</RelativeLayout>
+

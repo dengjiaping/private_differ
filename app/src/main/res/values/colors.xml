@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#455edd</color>-->
+    <!--<color name="colorPrimaryDark">#B7455EDD</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimary">@color/default_image_color</color>
+    <color name="colorPrimaryDark">@color/default_bg_color</color>
+    <color name="colorAccent">@color/default_hint_color</color>
+
+    <color name="default_image_color">#f4f4f4</color>
+
+    <color name="default_bg_color">#252D43</color>
+    <color name="default_hint_color">#627083</color>
+    <color name="btn_normal">#15B1B8</color>
+    <color name="btn_select">#1596B8</color>
+    <color name="font_select_color">#FF15B1B8</color>
+
+    <color name="font_color">#d0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="hint_color">#6C000000</color>
+    <color name="text_color_gray">#cccccc</color>
+    <color name="line_color">#eeeeee</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha_10">#19ffffff</color>
+    <color name="white_alpha_20">#33ffffff</color>
+    <color name="white_alpha_30">#7fffffff</color>
+    <color name="white_alpha_50">#7fffffff</color>
+    <color name="white_alpha_60">#99ffffff</color>
+    <color name="white_alpha_80">#ccffffff</color>
+
+    <color name="black">#000000</color>
+    <color name="black_alpha_20">#32000000</color>
+    <color name="black_alpha_30">#48000000</color>
+    <color name="black_alpha_40">#66000000</color>
+    <color name="black_alpha_45">#71000000</color>
+    <color name="black_alpha_50">#7f000000</color>
+    <color name="black_alpha_60">#99000000</color>
+    <color name="black_alpha_80">#cc000000</color>
+    <color name="black_alpha_90">#e5000000</color>
+
+    <!--视频播放页相关-->
+    <color name="bg_video_view">#80000000</color>
+    <color name="seek_background">#809e9e9e</color>
+    <color name="seek_progress">#cce91e63</color>
+    <color name="seek_secondary_progress">#88f48fb1</color>
+    <color name="seek_ball">#ffffffff</color>
+    <color name="media_quality_selected">#ccec407a</color>
+    <color name="video_skip">#e91e63</color>
+    <color name="text_hint">#55ffffff</color>
+    <color name="text_content">#ffffff</color>
+    <color name="background_gray">#ffa5a5a5</color>
+    <color name="background_gray_light">#ffbababa</color>
+    <color name="recover_screen_text">#f06292</color>
+
+    <color name="bg_blue_bar">#445fdd</color>
+    <color name="bg_white_text">#ffffff</color>
+    <color name="bg_gray_text">#77ffffff</color>
+    <color name="black_text">#111111</color>
+    <color name="background_gray_game_download">#F2F2F2</color>
+    <color name="text_color_blue">#7C86AC</color>
+    <color name="text_color_blue_light">#455ede</color>
+    <color name="text_color_gray_game">#666666</color>
+    <color name="text_color_tag">#8d9add</color>
+    <color name="text_color_red">#E91717</color>
+    <color name="text_color_red_bg">#FDF8F0</color>
+
+    <color name="pumpkinOrange">#000000</color>
+    <color name="mangoTwo">#e6000000</color>
+    <color name="lightGold">#9e000000</color>
+    <color name="yellowTan">#5a000000</color>
+    <color name="palePeachTwo">#2d000000</color>
+    <color name="whiteTwo">#f2f2f2</color>
+
+    <color name="default_line_color">#979797</color>
+
+</resources>

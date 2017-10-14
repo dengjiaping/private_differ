@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_game_detail_bottom"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/btn_share"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableTop="@drawable/ic_share_def"
+            android:gravity="center"
+            android:text="分享"
+            android:textSize="@dimen/textSize_10"
+            android:visibility="visible"/>
+
+        <com.appgame.differ.widget.download.DownloadProgressButton
+            android:id="@+id/btn_download"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/go_evaluate"
+            android:layout_toRightOf="@+id/btn_share"
+            android:gravity="center"
+            android:text="下载"
+            app:progress_btn_background_color="@color/btn_normal"
+            app:progress_btn_background_second_color="@color/white"
+            app:progress_btn_radius="2dp"
+            app:progress_btn_text_color="@color/btn_normal"
+            app:progress_btn_text_cover_color="@color/white"
+            app:progress_btn_text_size="12sp"/>
+
+        <TextView
+            android:id="@+id/go_evaluate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableTop="@drawable/ic_comment_def"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text="评价"
+            android:textSize="@dimen/textSize_10"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bar_left_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_back"/>
+
+    <ImageView
+        android:id="@+id/btn_feedback2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/btn_game_feedback_def"/>
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/bar_left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/btn_back"/>
+
+        <TextView
+            android:id="@+id/bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/btn_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_feedback"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/bar_title"
+            android:background="@color/black_alpha_20"/>
+    </RelativeLayout>
+
+    <com.appgame.differ.widget.CustomEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"/>
+
+    <com.appgame.differ.widget.CircleProgressView
+        android:id="@+id/load_pro"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/default_bg_color"
+        app:matProg_barWidth="2dp"
+        app:matProg_progressIndeterminate="true"/>
+
+</RelativeLayout>
+
+
+
+

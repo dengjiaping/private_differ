@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/topic_cover"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+
+        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="12dp"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <com.appgame.differ.widget.ShapeImageView
+        android:id="@+id/topic_game_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/frame_layout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:round_radius="6dp"
+        app:shape_mode="round_rect"/>
+
+    <TextView
+        android:id="@+id/topic_game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:layout_below="@+id/frame_layout"
+        android:layout_toRightOf="@+id/topic_game_icon"
+        android:text="斗破强请"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal"/>
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_game_title"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/topic_game_icon"
+        android:isIndicator="true"
+        android:maxHeight="12dp"
+        android:minHeight="12dp"
+        app:mrb_progressTint="@color/colorPrimary"
+        app:mrb_secondaryProgressTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_game_title"
+        android:layout_marginLeft="1dp"
+        android:layout_toRightOf="@+id/rating_bar"
+        android:text="9.3"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_small"/>
+
+    <com.appgame.differ.widget.download.DownloadRoundBar
+        android:id="@+id/download_pro"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/frame_layout"
+        android:layout_marginRight="22dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/start_app"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/frame_layout"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_frame_blue_corner"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_small"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/game_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating_bar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/game_desc"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color"/>
+</RelativeLayout>

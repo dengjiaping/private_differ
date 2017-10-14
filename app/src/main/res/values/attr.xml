@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 圆形头像控件-->
+    <declare-styleable name="RefreshCircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color2" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="slideswitch">
+        <attr name="themeColor" format="color"/>
+        <attr name="isOpen" format="boolean"/>
+        <attr name="shape">
+            <enum name="rect" value="1"/>
+            <enum name="circle" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ShapeImageView">
+        <attr name="shape_mode" format="enum">
+            <enum name="round_rect" value="1"/>
+            <enum name="circle" value="2"/>
+        </attr>
+        <attr name="round_radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftViewId" format="reference"/>
+        <attr name="rightViewId" format="reference"/>
+        <attr name="contentViewId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DownloadProBar">
+        <attr name="isNeedToDrawText" format="boolean"/>
+        <attr name="proColor" format="color"/>
+        <attr name="proBgColor" format="color"/>
+        <attr name="proLineWidth" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="StarBar">
+        <attr name="level" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension"/>
+        <!--星星大小-->
+        <attr name="starSize" format="dimension"/>
+        <!--星星个数-->
+        <attr name="starCount" format="integer"/>
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference"/>
+        <!--星星满图-->
+        <attr name="starFill" format="reference"/>
+    </declare-styleable>
+    
+    <declare-styleable name="UserNameView">
+        <attr name="nameSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DownloadProgressButton">
+        <attr name="progress_btn_radius" format="dimension"/>
+        <attr name="progress_btn_background_color" format="color"/>
+        <attr name="progress_btn_background_second_color" format="color"/>
+        <attr name="progress_btn_text_color" format="color"/>
+        <attr name="progress_btn_text_cover_color" format="color"/>
+        <attr name="progress_btn_text_size" format="dimension"/>
+        <attr name="progress_btn_border_width" format="dimension"/>
+        <attr name="progress_btn_ball_style" format="enum">
+            <enum name="STYLE_BALL_PULSE" value="1"/>
+            <enum name="STYLE_BALL_JUMP" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+
+    <!-- CircleProgressView -->
+    <declare-styleable name="CircleProgressView">
+        <attr name="matProg_progressIndeterminate" format="boolean"/>
+        <attr name="matProg_barColor" format="color"/>
+        <attr name="matProg_rimColor" format="color"/>
+        <attr name="matProg_rimWidth" format="dimension"/>
+        <attr name="matProg_spinSpeed" format="float"/>
+        <attr name="matProg_barSpinCycleTime" format="integer"/>
+        <attr name="matProg_circleRadius" format="dimension"/>
+        <attr name="matProg_fillRadius" format="boolean"/>
+        <attr name="matProg_barWidth" format="dimension"/>
+        <attr name="matProg_linearProgress" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="card">
+        <attr name="itemMarginTop" format="dimension"/>
+        <attr name="bottomMarginTop" format="dimension"/>
+        <attr name="yOffsetStep" format="dimension"/>
+        <attr name="widthHeightRate" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <attr name="normalTextColor" format="color"/>
+        <attr name="normalTextSize" format="dimension"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="selectedTextSize" format="dimension"/>
+        <attr name="unitHight" format="dimension"/>
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="maskHight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="refresh_DragRefreshLayout">
+        <attr name="refresh_empty" format="reference"/>
+        <attr name="refresh_content" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="HeaderViewPager">
+        <attr name="hvp_topOffset" format="dimension"/>
+    </declare-styleable>
+
+
+    <!--收起展开textview-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+        <attr name="contentTextColor" format="color"/>
+        <attr name="collapseExpandTextColor" format="color"/>
+        <attr name="contentTextSize" format="dimension"/>
+        <attr name="collapseExpandTextSize" format="dimension"/>
+        <attr name="textCollapse" format="string"/>
+        <attr name="textExpand" format="string"/>
+        <attr name="expandType" format="string"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="showAllText" format="string"/>
+        <attr name="collapseExpandGrarity">
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+        </attr>
+        <attr name="drawableGrarity">
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="DiscreteScrollView">
+        <attr name="dsv_orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!--ForceClickImageView-->
+    <declare-styleable name="ForceClickImageView">
+        <attr name="foregroundColor" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="NineImageView">
+        <attr name="nineImageHorizontalSpace" format="dimension" />
+        <attr name="nineImageVerticalSpace" format="dimension" />
+        <attr name="nineImageRadius" format="dimension" />
+        <attr name="nineImageRatio" format="float" />
+        <attr name="nineImageColumns" format="integer" />
+    </declare-styleable>
+
+</resources>

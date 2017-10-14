@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <com.appgame.differ.widget.ShapeImageView
+        android:id="@+id/game_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
+        android:src="@color/default_image_color"
+        app:round_radius="5dp"
+        app:shape_mode="round_rect"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/right_layout"
+        android:layout_toRightOf="@+id/game_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="天命传说之这都是命"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/text_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dp"
+            android:text="123.3M ／已下载67.7M"
+            android:textColor="#FF9B9B9B"
+            android:textSize="10sp"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="3dp"
+            android:max="100"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pro_bar"
+            android:layout_width="54dp"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_frame_green_corner_3"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/btn_normal"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_download_delete"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/game_icon"
+        android:background="@color/line_color"/>
+</RelativeLayout>

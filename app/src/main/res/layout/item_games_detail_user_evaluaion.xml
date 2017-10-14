@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/user_comment_layout"
+        layout="@layout/item_games_detail_evaluaion"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/btn_comment"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_frame_green_corner_3"
+        android:gravity="center"
+        android:text="我要评价"
+        android:textColor="@color/btn_normal"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

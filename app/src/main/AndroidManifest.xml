@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.appgame.differ">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <!-- Required -->
+    <permission
+        android:name="com.appgame.differ.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <application
+        android:name=".base.app.BaseTinkerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <!-- .module.login.view.SplashActivity -->
+        <activity
+            android:name=".module.login.view.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".module.search.SearchClassActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.view.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.EditUserInfoActivity"
+            android:label="@string/edit_title"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.setting.SettingActivity"
+            android:label="@string/setting_title"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".base.other.WebActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.setting.PrivacySettingActivity"
+            android:label="@string/privacy_setting"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.topic.TopicDetailCardActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.topic.TopicDetailListActivity"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.PersonalActivity"
+            android:label=""
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.daily.DailyDetailActivity"
+            android:label="differ日报"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false"/>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".module.game.PostEvaluationActivity"
+            android:label="评价游戏"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".module.game.GameFeedbackActivity"
+            android:label="反馈"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.game.GameDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".module.game.EvaluationDetailActivity"
+            android:label="评论正文"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".module.msg.MsgCenterActivity"
+            android:label="消息中心"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.msg.MsgListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.msg.MsgReplyActivity"
+            android:label="留言"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.LeaveMessageActivity"
+            android:label="全部留言"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.BadgeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.EditSummaryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.FansActivity"
+            android:label="粉丝"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.personal.view.FollowsActivity"
+            android:label="关注"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.home.DownloadManagerActivity"
+            android:label="下载队列"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.game.GameImagePageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.welcome.WelcomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.search.GameClassActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.find.DiscoverNavActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.find.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- 兼容7.0 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <service android:name=".service.push.NotificationService"/>
+        <service android:name=".service.push.MyPushIntentService"/>
+        <service android:name=".service.push.UmengNotificationService"/>
+        <service android:name=".service.push.MyNotificationService"/>
+        <service android:name=".service.AppInstallService"/>
+        <service android:name=".service.AppLoadService"/>
+
+        <receiver android:name=".receiver.AppInstallReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_INSTALL"/>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".service.push.NotificationBroadcast"/>
+        <!-- 网络状态监听 -->
+        <receiver android:name=".receiver.NetworkConnectChangedReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!--
+                &lt;!&ndash; 友盟 &ndash;&gt;
+                <meta-data
+                    android:name="UMENG_APPKEY"
+                    android:value="58f587328f4a9d47d700147b"/>
+                <meta-data
+                    android:name="UMENG_CHANNEL"
+                    android:value="@string/channel"/>
+                <meta-data
+                    android:name="UMENG_MESSAGE_SECRET"
+                    android:value="795d5b2d6d56d0812932ecc7a73c4336"/>
+        -->
+
+        <activity
+            android:name=".module.dynamic.SelectGameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.dynamic.PostDynamicActivity"
+            android:label="动态"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.dynamic.DynamicDetailActivity"
+            android:label="动态"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name=".module.ErrorActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.topic.TopicListActivity"
+            android:label="专题列表"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".module.demo.DemoActivity"/>
+
+        <activity
+            android:name=".KtSettingActivity"
+            android:label="@string/setting_title"
+            android:screenOrientation="portrait"/>
+
+
+
+
+    </application>
+
+</manifest>

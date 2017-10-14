@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+    <com.appgame.differ.widget.CircleImageView
+        android:id="@+id/user_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:src="@color/default_image_color"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_header"
+        android:layout_toRightOf="@+id/user_header"
+        android:textColor="@color/black_alpha_80"
+        android:textSize="14sp"
+        tool:text="巴拉gun"/>
+
+    <ImageView
+        android:id="@+id/icon_badge"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignTop="@+id/user_name"
+        android:layout_marginLeft="3.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/user_name"/>
+
+    <TextView
+        android:id="@+id/about_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="4.5dp"
+        android:layout_toLeftOf="@+id/btn_like"
+        android:layout_toRightOf="@+id/user_header"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="11sp"
+        tool:text="59秒前"/>
+
+    <TextView
+        android:id="@+id/btn_like"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/user_header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="27dp"
+        android:drawableLeft="@drawable/ic_like_def"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:text="22"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/about_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_time"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        tool:text="这个游戏不错，很良心呐，这个游戏不错，很良心呐。。。"/>
+
+    <RelativeLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/about_desc"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tag_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/up"
+            android:drawableLeft="@drawable/ic_game_comment"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/game_icon_like"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
+            android:text="0"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_comm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_layout"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:background="#F6F6F6"
+        android:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/replay_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F4F4"/>
+
+        <TextView
+            android:id="@+id/btn_see_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/replay_recycle"
+            android:layout_margin="5dp"
+            android:text="查看剩余留言"
+            android:textColor="@color/font_select_color"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <com.appgame.differ.module.demo.CommentReplayLayout
+        android:id="@+id/comm_re_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_layout"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/re_comm_layout"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/comm_re_layout"
+        android:background="#7f979797"/>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.appgame.differ.module.game.EvaluationDetailActivity">
+
+    <include layout="@layout/bar_layout"/>
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+
+        <com.appgame.differ.widget.ShapeImageView
+            android:id="@+id/game_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@color/default_image_color"
+            app:round_radius="6dp"
+            app:shape_mode="round_rect"/>
+
+        <TextView
+            android:id="@+id/game_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="天命传说"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e1e1e1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black_alpha_20"/>
+
+        <TextView
+            android:id="@+id/post_discuss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/add_tag"
+            android:drawableLeft="@drawable/icon_tab_comment"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/discuss_hint"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/add_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/the_dotted_line"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/tag"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/ic_share_def"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="分享"/>
+
+        <include layout="@layout/layout_post_layout"/>
+    </RelativeLayout>
+</LinearLayout>

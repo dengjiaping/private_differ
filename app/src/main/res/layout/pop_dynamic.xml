@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btn_pop"
+        android:layout_width="100dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#FFF4F4F4"
+        android:drawableLeft="@drawable/ic_dy_report"
+        android:drawablePadding="-20dp"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:text="举报"
+        android:textColor="@color/black_alpha_50"
+        android:textSize="14sp"/>
+
+
+</RelativeLayout>

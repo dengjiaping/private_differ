@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <com.appgame.differ.widget.StickyNavLayout
+        android:id="@+id/stick_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@id/id_stickynavlayout_topview"
+            android:layout_width="match_parent"
+            android:layout_height="195dp">
+
+            <ImageView
+                android:id="@+id/bg_cover"
+                android:layout_width="match_parent"
+                android:src="@color/default_bg_color"
+                android:layout_height="195dp"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:background="@drawable/shadow_gradient_reserve"/>
+
+            <RelativeLayout
+                android:id="@+id/user_header_layout"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="43dp">
+
+                <com.appgame.differ.widget.CircleImageView
+                    android:id="@+id/user_header"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:transitionName="@string/transition_user_avatar"/>
+
+                <ImageView
+                    android:id="@+id/btn_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_btn_profile"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_header_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/white_alpha_80"
+                android:textSize="16sp"
+                tool:text="繁华differ"/>
+
+            <ImageView
+                android:id="@+id/icon_badge"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_below="@+id/user_header_layout"
+                android:layout_marginLeft="3.5dp"
+                android:layout_marginTop="11dp"
+                android:layout_toRightOf="@+id/user_name"/>
+
+            <TextView
+                android:id="@+id/btn_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/line"
+                android:textColor="@color/white_alpha_50"
+                android:textSize="12sp"
+                tool:text="关注 30"/>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text=" | "
+                android:textColor="@color/white_alpha_50"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/btn_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/line"
+                android:text="粉丝 123232"
+                android:textColor="@color/white_alpha_50"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/follow_btn"
+                android:layout_width="100dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14sp"
+                android:background="@drawable/bg_frame_white_px_corner"
+                android:gravity="center"
+                android:text="+关注"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@id/id_stickynavlayout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/btn_normal"
+            app:tabMode="fixed"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </com.appgame.differ.widget.StickyNavLayout>
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:visibility="visible"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_temp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:layout_toLeftOf="@+id/msg_news"
+                android:src="@drawable/btn_setting_click"/>
+
+            <ImageView
+                android:id="@+id/msg_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/menu_news_click"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>
+
+
+
+

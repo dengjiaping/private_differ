@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/bar_layout"/>
+
+    <TextView
+        android:id="@+id/download_tip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#EABABA"
+        android:drawableLeft="@drawable/ic_network_error"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="当前处于移动网络，wifi自动下载"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/download_tip"/>
+
+    <com.appgame.differ.widget.CircleProgressView
+        android:id="@+id/load_pro"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:matProg_barColor="@color/colorPrimary"
+        app:matProg_barWidth="2dp"
+        app:matProg_progressIndeterminate="true"/>
+
+    <com.appgame.differ.widget.CustomEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

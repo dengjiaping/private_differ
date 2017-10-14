@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/differ_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/user_layout"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:id="@+id/user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp">
+
+            <com.appgame.differ.widget.CircleImageView
+                android:id="@+id/user_header"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="5dp"
+                android:src="@color/default_image_color"/>
+
+            <com.appgame.differ.widget.UserNameView
+                android:id="@+id/user_name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/user_header"
+                app:nameSize="4sp"/>
+
+            <TextView
+                android:id="@+id/tag_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_frame_gray_corner2"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/black_alpha_50"
+                android:textSize="10sp"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/differ_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/user_layout"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@color/default_image_color"/>
+
+        <TextView
+            android:id="@+id/differ_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/differ_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="游八卦：善待动物组织又向任天堂发起抗议"
+            android:textColor="@color/black_alpha_80"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/game_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/differ_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="2"
+            android:text="怀旧与创新融合的剧情向RPG手游《天命传说》为你带来热血与命运交错的“王道系”冒险故事！"
+            android:textColor="@color/black_alpha_60"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tag_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_desc"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/comment_num"
+            android:drawableLeft="@drawable/ic_game_label"
+            android:drawablePadding="2dp"
+            android:gravity="top"
+            android:textSize="12sp"
+            tool:text="122"/>
+
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/game_desc"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_game_comment"
+            android:drawablePadding="2dp"
+            android:gravity="top"
+            android:textSize="12sp"
+            tool:text="122"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

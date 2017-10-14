@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/replay_layout"
+        android:layout_below="@+id/toolbar_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/replay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F3F3"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp">
+
+        <EditText
+            android:id="@+id/edit_comm"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:background="@drawable/bg_evaluation_edit"
+            android:hint="请输入回复"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColorHint="@color/black_alpha_30"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_green_corner"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</RelativeLayout>

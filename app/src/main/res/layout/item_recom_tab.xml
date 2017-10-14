@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tool="http://schemas.android.com/tools"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="2dp"
+          android:layout_marginRight="2dp"
+          android:background="@drawable/bg_tag_click"
+          android:gravity="center"
+          android:paddingBottom="1dp"
+          android:paddingLeft="6dp"
+          android:paddingRight="6dp"
+          android:paddingTop="1dp"
+          android:textColor="@drawable/tag_text_color"
+          android:textSize="10sp"
+          tool:ignore="RtlHardcoded,SmallSp"
+          tool:text="HelloWorld"/>
